@@ -1,4 +1,4 @@
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>
@@ -27,13 +27,12 @@
         {{ tech.dislikes }}
       </td>
       <td>
-        <input type="submit" value="like" ng-click="incrementLikes(tech)">
+        <input type="submit" value="like" ng-click="incrementLikes(tech)" class="btn btn-primary">
       </td>
       <td>
-        <input type="submit" value="dislike" ng-click="incrementDisLikes(tech)">
+        <input type="submit" value="dislike" ng-click="incrementDisLikes(tech)" class="btn btn-danger">
       </td>
     </tr>
   </tbody>
 </table>
-<hr>
 <a href="/#/">back to home</a>
