@@ -2,16 +2,23 @@
 <html ng-app="myModule">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Angular practice</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="angular-route.js"></script>
     <script type="text/javascript" src="engine.js"></script>
-    <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
   </head>
-  <body ng-controller="myController">
-    <h1>Angular JS practice</h1>
-    <hr>
-    <div ng-view>
+  <body ng-controller="employeesController">
+    <div class="container">
+      <h1>Angular JS practice</h1>
+      <hr>
+      <div ng-view>
+      </div>
     </div>
   </body>
 </html>

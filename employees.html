@@ -4,7 +4,16 @@ sort by: <select ng-model="sortBy">
   <option value="age">Age</option>
   <option value="salary">Salary</option>
 </select>
-<table>
+<br><br>
+<input type="text" ng-model="employeeSearch[searchBy]" placeholder="search"/>
+<select ng-model="searchBy">
+  <option value="firstName">First Name</option>
+  <option value="lastName">Last Name</option>
+  <option value="age">Age</option>
+  <option value="salary">Salary</option>
+</select>
+
+<table class="table table-striped">
   <thead>
     <tr>
       <th>
@@ -19,10 +28,13 @@ sort by: <select ng-model="sortBy">
       <th>
         Salary
       </th>
+      <th>
+        Details
+      </th>
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="employee in employees | orderBy:sortBy">
+    <tr ng-repeat="employee in employees | filter:employeeSearch | orderBy:sortBy">
       <td>
         {{ employee.firstName }}
       </td>
@@ -34,6 +46,9 @@ sort by: <select ng-model="sortBy">
       </td>
       <td>
         {{ employee.salary | currency }}
+      </td>
+      <td>
+        <a href="/#/employee/{{employee.id}}">show</a>
       </td>
     </tr>
   </tbody>
