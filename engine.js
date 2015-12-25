@@ -1,28 +1,26 @@
-var myApp = angular.module("myModule", []);
+var myApp = angular.module("myModule", ['ngRoute']);
 
+myApp.config(function($routeProvider) {
+  $routeProvider
+    .when('/', {templateUrl:'employees.html'})
+  });
 myApp.controller("myController", function($scope, $http) {
-  $http.get('employees.js').success(function(data) {
-    console.log(data); 
-    $scope.employees=data; 
-  })
-    var technologies = [
-      { name: "Ruby", likes: 0, dislikes: 0 },
-      { name: "Python", likes: 0, dislikes: 0 },
-      { name: "PHP", likes: 0, dislikes: 0 },
-      { name: "Javascript", likes: 0, dislikes: 0 },
-      { name: "Java", likes: 0, dislikes: 0 }
-    ]
+   $http.get('employees.js').success(function(data) {
+     $scope.employees=data;
+   })
+   $http.get('technologies.js').success(function(data) {
+     $scope.technologies=data;  
+   })
     
-    $scope.incrementLikes = function(tech) {
-      tech.likes++;
-    }
+  $scope.incrementLikes = function(tech) {
+    tech.likes++;
+  }
     
-    $scope.incrementDisLikes = function(tech) {
-      tech.dislikes++;
-    }
+  $scope.incrementDisLikes = function(tech) {
+    tech.dislikes++;
+  }
     
-    $scope.message = "Angular JS practice";
-  //  $scope.employees = 
-    $scope.technologies = technologies;
-    $scope.sortBy = "firstName";
+  $scope.message = "Angular JS practice";
+  $scope.sortBy = "firstName";
+  
   });
