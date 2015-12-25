@@ -1,0 +1,40 @@
+<!--sort by: <select ng-model="sortBy">
+  <option value="firstName">First Name</option>
+  <option value="lastName">Last Name</option>
+  <option value="age">Age</option>
+  <option value="salary">Salary</option>
+</select>-->
+<table>
+  <thead>
+    <tr>
+      <th>
+        First name
+      </th>
+      <th>
+        Last name
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Salary
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="employee in employees | orderBy:sortBy">
+      <td>
+        {{ employee.firstName }}
+      </td>
+      <td>
+        {{ employee.lastName }}
+      </td>
+      <td>
+        {{ employee.age }}
+      </td>
+      <td>
+        {{ employee.salary | currency }}
+      </td>
+    </tr>
+  </tbody>
+</table>

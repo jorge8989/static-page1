@@ -1,0 +1,37 @@
+<table>
+  <thead>
+    <tr>
+      <th>
+        technology name
+      </th>
+      <th>
+        likes
+      </th>
+      <th>
+        dislikes
+      </th>
+      <th colspan="2">
+        like/dislike
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="tech in technologies | limitTo:4">
+      <td>
+        {{ tech.name }}
+      </td>
+      <td>
+        {{ tech.likes }}
+      </td>
+      <td>
+        {{ tech.dislikes }}
+      </td>
+      <td>
+        <input type="submit" value="like" ng-click="incrementLikes(tech)">
+      </td>
+      <td>
+        <input type="submit" value="dislike" ng-click="incrementDisLikes(tech)">
+      </td>
+    </tr>
+  </tbody>
+</table>
