@@ -1,0 +1,30 @@
+.become-partner p {
+  color: #999;
+}
+.become-partner h1 {
+  text-align: center;
+}
+
+.quotations {
+  
+}
+
+.navbar.navbar-default.white-navbar {
+  background-color: #fff;
+  padding: 15px 5px;
+  margin-bottom: 11%;
+}
+.logo{
+  width: 70%;
+}
+
+.white-navbar .btn.btn-default {
+  padding: 10px 55px;
+  margin-top: 5px;
+  border-radius: 25px;
+  color: #ffa500;
+}
+
+.btn.btn-default:hover {
+  color: #ffa500;
+}
